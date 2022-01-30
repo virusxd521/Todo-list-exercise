@@ -221,6 +221,9 @@ table {
   background-color: lavender;
   overflow-wrap: break-word;
 }
+.main__form input[type=submit]:hover {
+  cursor: pointer;
+}
 @media (min-width: 600px) {
   .main__form input[type=submit] {
     margin-left: unset;

@@ -13,20 +13,23 @@
         <p class="header__paragraph">Daniel's Shopping list</p>
     </header>
     <main class="main">
-        <form class="main__form">
+        <form class="main__form" method='POST' action="">
             <div class="form__box">
                 <label for="item">Enter the name of the item you wish to add:</label>
-                <input id="item" name="item" type="text" placeholder="Enter the name of the item..." >
+                <input  id="item" name="item" type="text" placeholder="Enter the name of the item..." required />
             </div>
             <div class="form__box">
                 <label label="quant">Please enter the quantity of that item:</label>
-                <input name="quant" id="quant" type="number" placeholder="Enter the quantity...">
+                <input name="quant" id="quant" type="number" placeholder="Enter the quantity..." required />
             </div>
-            <input type="submit" value="Click here to add the item">
+            <input class="submit" type="submit" value="Click here to add the item">
         </form>
+        <div class="elements-list">
+
+        </div>
     </main>
     <footer>
     </footer>
-    <script src="./javascript/script.js"></script>
+    <script type="module" src="./javascript/script.js"></script>
 </body>
 </html>
