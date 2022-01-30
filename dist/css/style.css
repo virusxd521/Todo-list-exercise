@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
 html,
 body,
 div,
@@ -152,4 +155,19 @@ table {
 
 .header__paragraph {
   color: silver;
+  align-self: center;
+  margin-right: auto;
+  font-family: "Neonderthaw", cursive;
+  font-size: 1.8rem;
+}
+
+.header__icon {
+  width: 15%;
+  height: 50%;
+  align-self: center;
+}
+@media (min-width: 400px) {
+  .header__icon {
+    width: 7%;
+  }
 }
