@@ -14,11 +14,15 @@
     </header>
     <main class="main">
         <form class="main__form">
-            <label for="">Enter the name of the item you want ot add</label>
-            <input type=text>
-            <label>Please enter the quantity of that item</label>
-            <input type="number">
-            <input type="submit" value="Click here to continue">
+            <div class="form__box">
+                <label for="item">Enter the name of the item you wish to add:</label>
+                <input id="item" name="item" type="text" placeholder="Enter the name of the item..." >
+            </div>
+            <div class="form__box">
+                <label label="quant">Please enter the quantity of that item:</label>
+                <input name="quant" id="quant" type="number" placeholder="Enter the quantity...">
+            </div>
+            <input type="submit" value="Click here to add the item">
         </form>
     </main>
     <footer>

@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
 html,
 body,
 div,
@@ -169,5 +174,69 @@ table {
 @media (min-width: 400px) {
   .header__icon {
     width: 7%;
+  }
+}
+
+.main__form {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "Heebo", sans-serif;
+  color: white;
+}
+.main__form .form__box {
+  display: flex;
+  flex-direction: column;
+}
+.main__form .form__box #item, .main__form .form__box #quant {
+  width: 60%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: lavender;
+}
+@media (min-width: 600px) {
+  .main__form .form__box #item, .main__form .form__box #quant {
+    width: 50%;
+  }
+}
+@media (min-width: 800px) {
+  .main__form .form__box #item, .main__form .form__box #quant {
+    width: 60%;
+  }
+}
+@media (min-width: 1000px) {
+  .main__form .form__box #item, .main__form .form__box #quant {
+    width: 40%;
+  }
+}
+.main__form input[type=submit] {
+  width: 60%;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: lavender;
+  overflow-wrap: break-word;
+}
+@media (min-width: 600px) {
+  .main__form input[type=submit] {
+    margin-left: unset;
+    width: 40%;
+  }
+}
+@media (min-width: 800px) {
+  .main__form input[type=submit] {
+    margin-left: unset;
+    width: 30%;
+  }
+}
+@media (min-width: 1000px) {
+  .main__form input[type=submit] {
+    margin-left: unset;
+    margin-top: 25px;
+    width: 15%;
   }
 }
