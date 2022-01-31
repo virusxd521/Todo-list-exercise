@@ -13,3 +13,12 @@ package-lock.json
 
 # ignoring the source directory
 src
+
+#ignore webpack
+webpack.config.js
+
+#ignoring babel
+.babelrc
+
+#ignoring compiled JS
+main.js
