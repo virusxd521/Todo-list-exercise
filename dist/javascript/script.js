@@ -7,9 +7,13 @@ const item = document.querySelector("#item");
 const quantity = document.querySelector("#quant");
 const elementsList = document.querySelector(".elements-list");
 
+
+
+// icon for removing an item (for now it's a shopping cart) 
+const shoppingCartSrc = "./dist/images/shopping-cart-solid.svg";
+
 // The icons which will be added to each element
-const icon = {
-    shoppingCart: "./dist/images/shopping-cart-solid.svg",
+const footerIcon = {
     americanExpress: "./dist/images/amex-brands.svg",
     masterCard: "./dist/images/mastercard-brands.svg",
     visa: "./dist/images/visa-brands.svg"
@@ -18,9 +22,13 @@ const icon = {
 // Footer function creation
 const boxesFooterCreation = () => {
     // Creating images and attaching src to the images
-    for(let property in icon){
-
+    const footerBox = basicElements("div", "box__footer");
+    for(let property in footerIcon){
+        const imageCredit = basicElements("img", "credit", `${footerIcon[property]}`);
+        appendingMany(footerBox, imageCredit);
     }
+
+    return footerBox;
 }
 
 // Function for creating elements and assiging class and content
@@ -45,7 +53,7 @@ const appendingMany = (parentElement, ...manyChildrens) => {
 // Creating box header
 const boxesHeaderCreation = (data, quant) => {
     const p = basicElements("p", "box__header-paragraph", `${data}`);
-    const image = basicElements("img", "box__header--shopping-cart");
+    const image = basicElements("img", "box__header--shopping-cart", shoppingCartSrc);
     const boxHeader = basicElements("div", "box__header");
     appendingMany(boxHeader, p, image); 
     return boxHeader;
@@ -57,7 +65,9 @@ const boxesCreation = (valueOfItem, quantityOfItem) => {
     const listBox = basicElements("div", "list__box");
     const headerOfBox = boxesHeaderCreation(valueOfItem, quantityOfItem );
     const hrOfBox = basicElements("hr", "list__hr");
-    appendingMany(listBox, headerOfBox, hrOfBox);
+    const footerOfBOx = boxesFooterCreation();
+    
+    appendingMany(listBox, headerOfBox, hrOfBox, footerOfBOx);
     
 
     // creating the header of the item
