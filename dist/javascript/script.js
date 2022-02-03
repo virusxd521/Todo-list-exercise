@@ -107,6 +107,7 @@ const removalElement = e => {
 inputSubmit.addEventListener("click", event => {
     // Preventing from the form to initilize a page reloade
     event.preventDefault();
+    console.log("here the issue is here");
     // Displaying an alert when one of the fields is empty
     if(item.value === "" || quantity.value === ""){
         Swal.fire({
